@@ -32,8 +32,23 @@ body {
     top: 10%;
     width: 35%;
     left: 10%;
-
     padding: 20px;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .navbar__s1__title {
@@ -93,6 +108,7 @@ body {
     justify-content: space-around;
     border-bottom: black solid 1px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .categories p {
@@ -100,6 +116,15 @@ body {
     padding: 10px;
     border-radius: 30px;
     color: white;
+    transition: .5s;
+    border: solid 1px transparent;
+}
+
+.categories p:hover{
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: solid 1px #A435F0;
 }
 
 .sale-image img {
